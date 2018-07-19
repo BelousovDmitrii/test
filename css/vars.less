@@ -1,0 +1,55 @@
+@import "style";
+
+@main-color-red:#d20200;
+@main-color-yellow:#fff7bc;
+@main-color-orange:#ffb400;
+@main-color-green:#5cc690;
+@main-color-grey:#c7c1bd;
+@main-color-grey-light:#f5f7f8;
+@main-color-black:#111;
+
+.grey-text{
+  color:@main-color-grey;
+}
+img{
+  max-width:100%;
+  height:auto;
+}
+.bold-text{
+  font-family:'Arial',sans-serif;
+  font-weight: bold;
+}
+.link-dotted{
+  border-bottom:1px dotted @main-color-red;
+  text-decoration: none;
+  position: relative;
+  color:#111;
+  transition: border-color .2s;
+  &:hover{
+    border-color:transparent;
+  }
+}
+.btn{
+  padding:11px 0;
+  text-decoration: none;
+  border-radius: 19px;
+  color:#fff;
+  display: block;
+
+  &-red{
+    background-color: @main-color-red;
+    padding:9px 25px;
+  }
+  &-orange{
+    background-color: @main-color-orange;
+    padding:9px 25px;
+  }
+  &-callback{
+    display: block;
+    padding: 6px 55px;
+  }
+  &-stock{
+    background: url("../tz/img/gift.png") @main-color-orange 18px center  no-repeat;
+    padding:9px 25px 9px 50px;
+  }
+}
