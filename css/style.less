@@ -12,7 +12,9 @@ html, body {
   height: 100%;
   font-family: 'PT Sans', sans-serif;
 }
-
+.wrapper{
+  padding-bottom: 200px;
+}
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -145,37 +147,36 @@ html, body {
     display: flex;
     justify-content: space-between;
   }
-
-  .main-information{
-    flex-basis: 50% ;
-    padding:30px;
-    border-top:1px solid @main-color-grey-light;
-    border-right:1px solid @main-color-grey-light;
-    border-bottom:1px solid @main-color-grey-light;
+  .main-information {
+    flex-basis: 50%;
+    padding: 30px;
+    border-top: 1px solid @main-color-grey-light;
+    border-right: 1px solid @main-color-grey-light;
+    border-bottom: 1px solid @main-color-grey-light;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    .main-information__row-left,.main-information__row-right{
+    .main-information__row-left, .main-information__row-right {
       display: flex;
       justify-content: space-between;
       flex-basis: 47%;
       align-items: center;
     }
-    .main-information__top{
-      border-bottom:1px solid @main-color-grey;
+    .main-information__top {
+      border-bottom: 1px solid @main-color-grey;
       padding-bottom: 15px;
     }
 
-    .main-information__row{
-      display:flex;
+    .main-information__row {
+      display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
-      &:last-child{
-        margin-bottom:0px;
+      &:last-child {
+        margin-bottom: 0px;
       }
     }
-    .reviews-stars{
+    .reviews-stars {
       display: flex;
-      .star{
+      .star {
         background: url("../tz/img/star.png") no-repeat center center;
         -webkit-background-size: cover;
         background-size: cover;
@@ -183,106 +184,106 @@ html, body {
         height: 15px;
         margin-right: 5px;
       }
-      .unactive{
+      .unactive {
         background: url("../tz/img/star-unactive.png") no-repeat center center;
       }
     }
-    .availability{
+    .availability {
       display: flex;
       align-items: center;
-      .availability__icon{
+      .availability__icon {
         height: 24px;
       }
-      .availability__text{
+      .availability__text {
         color: @main-color-green;
         margin-left: 18px;
       }
     }
-    .comparsion,.favorite{
-      .comparsion__link,.favorite__link{
+    .comparsion, .favorite {
+      .comparsion__link, .favorite__link {
         display: flex;
         align-items: center;
         text-decoration: none;
       }
-      .comparsion__button,.favorite__button{
+      .comparsion__button, .favorite__button {
         margin-left: 10px;
 
       }
-      .comparsion__icon,.favorite__icon{
+      .comparsion__icon, .favorite__icon {
         height: 16px;
       }
     }
-    .saving{
-      color:@main-color-grey;
+    .saving {
+      color: @main-color-grey;
     }
-    .price{
-      .price__new{
+    .price {
+      .price__new {
         font-size: 25px;
         font-family: 'Arial Bold', sans-serif;
         font-weight: bold;
       }
-      .price__old{
-        color:@main-color-grey;
+      .price__old {
+        color: @main-color-grey;
         text-decoration: line-through;
       }
     }
-    .main-information__bottom{
+    .main-information__bottom {
       display: flex;
       padding-top: 30px;
       justify-content: space-between;
     }
-    .delivery{
+    .delivery {
       flex-basis: 50%;
       background-color: @main-color-grey-light;
 
-      .delivery__title{
-        font-family:'Arial',sans-serif;
+      .delivery__title {
+        font-family: 'Arial', sans-serif;
         background-color: #fff;
       }
-      .delivery__item{
+      .delivery__item {
         margin-bottom: 15px;
-        &:last-child{
+        &:last-child {
           margin-bottom: 0;
         }
       }
-      .delivery__item-title{
-        font-family:'Arial Bold',sans-serif;
+      .delivery__item-title {
+        font-family: 'Arial Bold', sans-serif;
         font-weight: bold;
       }
-      .delivery__list{
-        padding:20px;
+      .delivery__list {
+        padding: 20px;
       }
     }
-    .payment{
+    .payment {
       flex-basis: 44%;
       background-color: @main-color-grey-light;
-      .payment__title{
+      .payment__title {
         background-color: #fff;
       }
-      .payment__item{
+      .payment__item {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
       }
-      .payment__list{
+      .payment__list {
         height: 100%;
-        padding:20px;
+        padding: 20px;
       }
-      .payment__text{
+      .payment__text {
         margin-left: 10px;
-        font-weight:bold;
-        font-family:'Arial Bold',sans-serif;
+        font-weight: bold;
+        font-family: 'Arial Bold', sans-serif;
       }
     }
   }
-  .slider{
+  .slider {
     flex-basis: 50%;
-    border:1px solid @main-color-grey-light;
-    .slider__main-image{
+    border: 1px solid @main-color-grey-light;
+    .slider__main-image {
       height: 80%;
       text-align: center;
     }
-    .slider__image-list{
+    .slider__image-list {
       background-color: @main-color-grey-light;
       height: 20%;
       display: flex;
@@ -290,18 +291,122 @@ html, body {
       justify-content: space-around;
       align-items: center;
     }
-    .slider__image-item{
+    .slider__image-item {
       flex-basis: 15%;
       cursor: pointer;
-      &.active{
-        opacity:0.4;
+      &.active {
+        opacity: 0.4;
       }
     }
-    .slider__arrow{
+    .slider__arrow {
       flex-basis: 2%;
       cursor: pointer;
-      &:last-child{
+      &:last-child {
         text-align: right;
+      }
+    }
+  }
+  .tabs {
+    margin-top: 30px;
+    .tabs__controls-list {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: @main-color-grey-light;
+      }
+    }
+    .tabs__controls-item{
+      flex-basis: 19.7%;
+      text-align: center;
+      cursor: pointer;
+      padding:23px 0;
+      background-color: @main-color-grey-light;
+      border-top-left-radius:15px;
+      border-top-right-radius:15px;
+      transition: background-color,color .2s;
+      &.active{
+        border-top:3px solid @main-color-grey-light;
+        border-left:3px solid @main-color-grey-light;
+        border-right:3px solid @main-color-grey-light;
+        background-color: #fff;
+        color:@main-color-red;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left:0;
+          height: 3px;
+          z-index: 3;
+          width: 100%;
+          background-color: #fff;
+        }
+      }
+      &:hover{
+        color:@main-color-red
+      }
+    }
+    .tabs__list{
+      margin-top:50px;
+    }
+    .tabs__item{
+      position: relative;
+    }
+    .filter{
+      .view-filter{
+        display: flex;
+        .view-filter__title{
+          color:@main-color-grey;
+          margin-right: 10px;
+        }
+        .view-filter__list{
+          display: flex;
+        }
+        .view-filter__item{
+          cursor: pointer;
+          margin-right: 10px;
+          -webkit-transition: color .2s;
+          -moz-transition: color .2s;
+          -ms-transition: color .2s;
+          -o-transition: color .2s;
+          transition: color .2s;
+          &:hover{
+            color:@main-color-red;
+          }
+        }
+      }
+      .filter__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .filter__trigger{
+        position: relative;
+        cursor: pointer;
+        padding:16px 48px 16px 50px;
+        color:#fff;
+        background: url("../tz/img/settings-white.png") #37474f 15px center no-repeat;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 26px;
+        border-radius: 26px;
+        &:after{
+          position: absolute;
+          content: '';
+          width: 15px;
+          height: 15px;
+          top: 50%;
+          margin-top: -2.5px;
+          right: 9px;
+          background: url('../tz/img/arrow-white.png') no-repeat;
+          transform: rotate(0deg);
+        }
       }
     }
   }
